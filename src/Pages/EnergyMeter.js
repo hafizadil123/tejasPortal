@@ -185,7 +185,7 @@ voltage:{
         marginLeft:'290px',    }
   }
 }
-const apiUrl = 'http://68.183.86.27/api/getTWMYData';
+const apiUrl = 'https://68.183.86.27/api/getTWMYData';
 class EnergyMeter extends  Component{
   constructor(props){
     super(props)
