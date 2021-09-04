@@ -232,7 +232,7 @@ class EnergyMeter extends  Component{
           frequency:apiFrequency,
           energyConsumedWeekly:week_consumed_energy,
           energyConsumedMonthly:month_consumed_energy,
-          powerFactor:apiPowerFactor,
+          powerFactor: apiPowerFactor,
           energyConsumed:consumed_energy,
           energyConsumedDaily:today_consumed_energy,
           lastUpdate: ping_datetime,
@@ -330,7 +330,7 @@ class EnergyMeter extends  Component{
               Power Factor
             </Typography>
             <Typography className={classes.data}>
-              {power} <span style={{fontSize:'15px'}}>watts</span>
+              {powerFactor} <span style={{fontSize:'15px'}}>watts</span>
             </Typography>
           </Grid>
           
