@@ -202,6 +202,7 @@ class EnergyMeter extends  Component{
       pahseAngle:357.6,
       energyConsumed:143.01,
       energyConsumedDaily:10.2,
+      device_location: 'Office, Navi Mumbai',
       lastUpdate:'15/06/2021  21:38:32',
     }
   }
@@ -222,6 +223,7 @@ class EnergyMeter extends  Component{
           today_consumed_energy,
           voltage,
           week_consumed_energy,
+          device_location
         } = energy_meter_1 || {}
         this.setState({
           devicesActive:1,
@@ -236,6 +238,7 @@ class EnergyMeter extends  Component{
           energyConsumed:consumed_energy,
           energyConsumedDaily:today_consumed_energy,
           lastUpdate: ping_datetime,
+          device_location: device_location
         });
       })
       .catch(err => {
@@ -256,6 +259,7 @@ class EnergyMeter extends  Component{
       energyConsumedDaily,
       energyConsumedWeekly,
       lastUpdate, 
+      device_location
     }=this.state;
   
     console.log('aaa', this.state);
@@ -268,7 +272,7 @@ class EnergyMeter extends  Component{
           <div className={classes.fontrealtime}>
               <NavLink style={{textDecoration:'none',color:'inherit',
               borderBottom:'1px solid #B0BBB6', padding:'10px'}}
-               to='/energy-meter'>Energy Meter-Location:Office, Navy Mumbai</NavLink>
+               to='/energy-meter'>Energy Meter - Location: ${device_location}</NavLink>
           </div>
         </Grid>
         <Grid item xs={12} md={5} lg={5} className={classes.devices}>
@@ -330,7 +334,7 @@ class EnergyMeter extends  Component{
               Power Factor
             </Typography>
             <Typography className={classes.data}>
-              {powerFactor} <span style={{fontSize:'15px'}}>watts</span>
+              {powerFactor} <span style={{fontSize:'15px'}}></span>
             </Typography>
           </Grid>
           
