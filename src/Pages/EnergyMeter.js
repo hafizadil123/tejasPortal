@@ -272,7 +272,7 @@ class EnergyMeter extends  Component{
           <div className={classes.fontrealtime}>
               <NavLink style={{textDecoration:'none',color:'inherit',
               borderBottom:'1px solid #B0BBB6', padding:'10px'}}
-               to='/energy-meter'>Energy Meter - Location: ${device_location}</NavLink>
+               to='/energy-meter'>Energy Meter - Location: {device_location}</NavLink>
           </div>
         </Grid>
         <Grid item xs={12} md={5} lg={5} className={classes.devices}>
@@ -318,7 +318,7 @@ class EnergyMeter extends  Component{
               Power
           </Typography>
           <Typography className={classes.data}>
-              {power} <span style={{fontSize:'15px'}}>watts</span>
+              {power} <span style={{fontSize:'15px'}}>Watts</span>
           </Typography>
           </Grid>
           <Grid item xs={4} lg={2} sm={4} md={2} className={classes.datacontainer}>
