@@ -1,0 +1,9 @@
+.color-navtop{
+  background-color: #e1d8d8;
+}
+
+.nav-items{
+  @media only screen and(max-width: 930px) {
+    font-size:20px
+}
+}
